@@ -16,6 +16,8 @@ public class Main {
         new EmployeeTest().runTest();
         new PersonTest().runTest();
 
+        //Person myPerson(Person.MAX_AGE+1, Person.MAX_HEIGHT+1, '', true) <- проверка для классического конструктора с обработкой Исключений
+
     }
 
     private static class ClientTest {
