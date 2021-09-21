@@ -19,7 +19,8 @@ public class Bowl extends Dish{
         this.amountOfSoup = amountOfSoup;
     }
 
-    public int eatSoup(){
+    public int eatSoup() throws IllegalArgumentException{
+        if(amountOfSoup == 0) throw new IllegalArgumentException("There is no soup(((");
         System.out.println("Eating Soup");
         for(int i = this.amountOfSoup; i>=0; i--){
             setAmountOfSoup(i);

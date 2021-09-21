@@ -5,7 +5,10 @@ public class Main {
         new TestFork().runTest();
         new TestBowl().runTest();
         new TestSpoon().runTest();
-        Fork fork = new Fork(Dish.Material.Aluminium, 10, false, true, "White", 4);
+        Fork fork = new Fork(Dish.Material.Aluminium, 10, false, false, "White", 4);
+        //fork.setDisposable(true);
+        Bowl emptyBowl = new Bowl(Dish.Material.Porcelain, 100, true, false, "Blue");
+        emptyBowl.eatSoup();
     }
     public static class TestFork{
         public void runTest(){
