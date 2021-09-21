@@ -5,6 +5,8 @@ import com.company.Person;
 public class Main {
     public static void main(String[] args){
         new DogTest().runTest();
+        new BallTest().runTest();
+        new BookTest().runTest();
     }
 
     private static class DogTest {

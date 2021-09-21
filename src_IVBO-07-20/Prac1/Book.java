@@ -16,6 +16,7 @@ public class Book {
     public String getAuthor(String author) {
         return author;
     }
+    @Override
     public String toString(){
         return this.author+", название "+this.title;
     }

@@ -16,6 +16,7 @@ public class Ball {
     public int getSize() {
         return size;
     }
+    @Override
     public String toString(){
         return this.colour+", size "+this.size;
     }

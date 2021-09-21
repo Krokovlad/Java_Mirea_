@@ -13,17 +13,22 @@ public class Dog {
     }*/
 
     public void setAge(int age) {
+
         this.age = age;
     }
     public void setName(String name) {
+
         this.name = name;
     }
     public String getName(String name){
+
         return name;
     }
     public int getAge() {
+
         return age;
     }
+    @Override
     public String toString(){
         return this.name+", возраст "+this.age;
     }
