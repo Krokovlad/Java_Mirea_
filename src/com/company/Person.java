@@ -40,7 +40,7 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws IllegalArgumentException{
         if (name.isEmpty()) throw new IllegalArgumentException("Name cannot be empty!!!");
         this.name = name;
     }
@@ -55,15 +55,18 @@ public class Person {
         public Builder(){
             newPerson = new Person();
         }
-        public Builder withAge(int age){
+        public Builder withAge(int age) throws IllegalArgumentException{
+            if (age > MAX_AGE) throw new IllegalArgumentException("Person is too old!!!");
             newPerson.age = age;
             return this;
         }
-        public Builder withHeight(double height){
+        public Builder withHeight(double height) throws IllegalArgumentException {
+            if (height > MAX_HEIGHT) throw new IllegalArgumentException("Person is too tall!!!");
             newPerson.height = height;
             return this;
         }
-        public Builder withName(String name){
+        public Builder withName(String name)throws IllegalArgumentException{
+            if (name.isEmpty()) throw new IllegalArgumentException("Name cannot be empty!!!");
             newPerson.name = name;
             return this;
         }
